@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>卡皮巴萬 - 專業昆蟲量販</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar { background: linear-gradient(90deg, #f610a9, #ff7f00, #ffff00, #edfe00, #ff7f00, #f610a9, ); }
+        .product-container { min-height: 350px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark mb-4 shadow-lg" style="background-color: #000000; border: none; padding: 1rem 0; position: relative;">
+    <div class="container-fluid justify-content-center">
+        <div id="tomato-btn" style="cursor: pointer; font-size: 2rem; margin-right: 15px; filter: drop-shadow(0 0 10px #FF6347); animation: tomato-glow 1.5s ease-in-out infinite alternate;">
+            🍅
+        </div>
+
+        <a class="navbar-brand font-weight-bold" href="/" style="font-family: 'Comic Sans MS', 'Chalkboard SE', 'Yu Anti', 'Microsoft JhengHei', sans-serif; font-size: 1.8rem; letter-spacing: 4px;">
+    <span class="ultra-rainbow">拉長耳朵 提高警覺 神經細胞 全面戒備</span>
+</a>
+<style>
+    /* 1. 讓彩虹字動起來的關鍵 */
+    .ultra-rainbow {
+        background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #00FFFF, #0000FF, #8B00FF, #FF0000);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        font-weight: 900;
+        /* 霓虹發光感 */
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+        /* 動畫效果：3秒跑一圈 */
+        animation: shine 3s linear infinite;
+    }
+
+    /* 2. 定義動畫路徑 */
+    @keyframes shine {
+        to { background-position: 200% center; }
+    }
+
+    /* 3. 番茄發光效果 (保留你原本有的) */
+    @keyframes tomato-glow {
+        from { filter: drop-shadow(0 0 5px #FF6347) scale(1); }
+        to { filter: drop-shadow(0 0 20px #FF0000) scale(1.1); }
+    }
+</style>
+        <div id="tomato-menu" style="display: none; position: absolute; top: 100%; left: 10%; background: #fff; color: #000; border: 3px solid #FF6347; border-radius: 15px; padding: 20px; z-index: 1000; box-shadow: 0 10px 30px rgba(255,0,0,0.3); min-width: 220px;">
+            <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Microsoft JhengHei'; font-weight: bold;">
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><a href="/products/" style="text-decoration: none; color: #333; display: block;">✨ 推薦商品</a></li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><a href="/cart/" style="text-decoration: none; color: #333; display: block;">🛒 購物車</a></li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><a href="/profile/" style="text-decoration: none; color: #333; display: block;">💯會員專區</a></li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><a href="/locations/" style="text-decoration: none; color:#333;display: block;">🍔服務據點</a></li>
+                <li style="padding: 10px 0; display: flex; align-items: center;">
+    {% load static %}
+    <img src="{% static 'images/我的刀盾.jpg' %}" 
+         style="width: 18px; height: 18px; object-fit: cover; border-radius: 3px; margin-right: 8px; filter: drop-shadow(0 0 2px #FF6347);">
+    
+    <a href="/defense/" style="text-decoration: none; color: #d9534f; display: block; font-weight: 900; font-size: 1rem; line-height: 18px;">我的刀盾</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="row no-gutters border shadow-sm h-100">
+            <div class="col-md-7">
+                {% load static %}
+                <img src="{% static 'images/logo.jpg' %}" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-5 p-3 bg-white d-flex flex-column">
+                <h4 class="font-weight-bold">周秉萬</h4>
+                <p class="text-muted small">陳玄禛的兒子</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="text-danger font-weight-bold" style="font-size: 0.9rem;">NT 八萬</span>
+                    <a href="#" class="btn btn-success btn-sm px-2">直接購買</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="row no-gutters border shadow-sm h-100">
+            <div class="col-md-5">
+                {% load static %}
+                <img src="{% static 'images/重乳奶茶.jpg' %}" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-7 p-3 bg-white d-flex flex-column">
+                <h4 class="font-weight-bold">重乳奶茶/重乳草莓奶茶</h4>
+                <p class="text-muted small">🧨哎咦耶咦耶咦耶啊⬆️哦⬇️，哎咦耶咦耶咦耶啊⬆️哦⬆️，我恭喜👏你發財🤑，我恭喜👍你精彩！最好的請過來🤲，不好的請走開👋，oh～🧧禮多人不怪🎊，我祝☝滿天下的女孩👧🌸，嫁一個好男孩👦，倆小口👫🐘永遠在一塊🦅，我祝🤟滿天下的小孩👧，聰明✍️勝過秀才💯，智商👉充滿你🧠腦袋🎓，我祝🀄尊敬🤞的姑奶奶👵，三十六圈的比賽🚀，氣不喘💦面容不改🥵，我祝👌三叔公👴的買賣 🤝，生意💪揚名四海👏，財運亨通💴住豪宅🏠，大搖🕺大擺💃，樂天替你消災🙇，恭喜～發財🧧，要喊得🔊夠豪邁🗣🗣。恭⬇️！喜⬇️！發⬆️！財⬆️！！</p>
+                
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="text-danger font-weight-bold" style="font-size: 0.9rem;">NT$30</span>
+                    <a href="#" class="btn btn-dark btn-sm px-2">查看詳情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="row no-gutters border shadow-sm h-100">
+            <div class="col-md-8">
+                <img src="{% static 'images/cat.jpg' %}" class="w-100 h-100" style="object-fit: cover;">
+                </div>
+                <div class="col-md-4 p-3 bg-white d-flex flex-column">
+                <h4 class="font-weight-bold">古ㄇㄠˇ咪</h4>
+                <hr class="my-2">
+                <p class="text-muted small">古弘喵長得很像貓</p>
+                
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="text-danger font-weight-bold" style="font-size: 0.9rem;">貓罐頭兌換</span>
+                    <a href="#" class="btn btn-dark btn-sm px-3">查看詳情</a>
+                </div>
+            </div> 
+        </div>
+     </div> 
+     <div class="col-md-6 mb-4">
+        <div class="row no-gutters border shadow-sm h-100">
+            <div class="col-md-8">
+                {% load static %}
+                <video class="w-100 h-100" style="object-fit: cover;" autoplay loop muted playsinline>
+                    <source src="{% static 'images/路比醬漢堡.mp4' %}" type="video/mp4">
+                    您的瀏覽器不支援影片播放。
+                </video>
+            </div>
+            
+            <div class="col-md-4 p-3 bg-white d-flex flex-column">
+                <h4 class="font-weight-bold">露比醬</h4>
+                <p class="text-muted small">露比醬 嗨~納尼打死ㄍㄧˊ？秋口ㄌㄟ抖U尼某阿那答！！！</p>
+                
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <span class="text-danger font-weight-bold" style="font-size: 0.9rem;">？？？</span>
+                    <a href="#" class="btn btn-danger btn-sm px-2">查看詳情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+ </div>
+</div> 
+<script>
+    // 1. 抓到番茄和選單
+    const btn = document.getElementById('tomato-btn');
+    const menu = document.getElementById('tomato-menu');
+
+    // 2. 設定點擊動作
+    btn.onclick = function(event) {
+        event.stopPropagation(); // 防止點擊事件傳出去
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block'; // 點一下打開
+        } else {
+            menu.style.display = 'none';  // 再點一下關閉
+        }
+    };
+
+    // 3. 點擊畫面其他地方就關閉選單
+    window.onclick = function() {
+        menu.style.display = 'none';
+    };
+</script>
+</body>
+</html>

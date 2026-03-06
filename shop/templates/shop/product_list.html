@@ -1,0 +1,33 @@
+<div style="text-align: center; margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+    
+    <h1 style="color: #ff6347; margin: 0; font-weight: 900;">推薦商品店</h1>
+
+    <a href="https://www.facebook.com/profile.php?id=61558672452748&locale=zh_TW" target="_blank" 
+       style="text-decoration: none; background-color: #1877F2; color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; display: flex; align-items: center; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       <span style="margin-right: 5px;">💬</span> 聯繫賣家
+    </a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
+    {% for product in products %}
+    <div style="border: 1px solid #ddd; border-radius: 15px; margin: 15px; padding: 15px; width: 250px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+        {% endif %}
+        
+        <h3 style="margin: 10px 0;">{{ product.name }}</h3>
+        
+        <p style="color: #d9534f; font-weight: bold; font-size: 1.2rem;">NT$ {{ product.price }}</p>
+        
+        <a href="{% url 'product_detail' product.pk %}" style="display: inline-block; padding: 8px 20px; background-color: #5cb85c; color: white; text-decoration: none; border-radius: 5px;">
+            查看詳情
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div style="text-align: center; margin: 50px 0;">
+    <a href="{% url 'index' %}" style="text-decoration: none; color: #5cb85c; font-weight: bold; border: 2px solid #5cb85c; padding: 10px 20px; border-radius: 30px; transition: 0.3s;">
+        回到首頁
+    </a>
+</div>
